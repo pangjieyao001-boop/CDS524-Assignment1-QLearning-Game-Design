@@ -4,8 +4,8 @@
 
 ---
 
-**Student Name:** Pangjieyao  
-**Student ID:** 3161685  
+**Student Name:** Pang  
+**Student ID:** 3161xxx  
 **Course:** CDS524 - Machine Learning  
 
 ---
