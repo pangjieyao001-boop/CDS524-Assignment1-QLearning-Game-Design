@@ -1,0 +1,8 @@
+res://modules/world_player_v2/world_testV2.tscn
+res://modules/q_learning_ai/state_extractor.gd
+res://modules/q_learning_ai/ai_controller.gd
+res://modules/q_learning_ai/reward_calculator.gd
+res://game/entities/entity_manager.gd
+res://modules/q_learning_ai/q_learning_agent.gd
+res://modules/q_learning_ai/ai_debug_ui.gd
+res://modules/q_learning_ai/training_manager.gd

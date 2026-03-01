@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8q6y8w3v1x2y"]
+
+[ext_resource type="Script" path="res://modules/q_learning_ai/training_manager.gd" id="1_training_manager"]
+[ext_resource type="Script" path="res://modules/q_learning_ai/ai_debug_ui.gd" id="2_ai_debug_ui"]
+
+[node name="QLearningManager" type="Node"]
+
+[node name="TrainingManager" type="Node" parent="."]
+script = ExtResource("1_training_manager")
+auto_start = true
+save_interval = 10
+max_episodes = 1000
+max_steps_per_episode = 500
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="AIDebugUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ai_debug_ui")

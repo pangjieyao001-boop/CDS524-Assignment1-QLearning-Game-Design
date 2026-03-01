@@ -1,0 +1,95 @@
+
+================================================================================
+CDS524 ASSIGNMENT 1 - REINFORCEMENT LEARNING GAME DESIGN
+Q-LEARNING AI FOR HORROR SURVIVAL GAME
+Training Report: 24-Hour Session Results
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+This report documents the training of a Q-Learning agent to control a player
+character in a 3D horror survival game. The agent learned to navigate the
+environment, locate enemies, and engage in combat over 1,000 episodes of
+training (approximately 24 hours).
+
+TRAINING CONFIGURATION
+----------------------
+Algorithm: Q-Learning with Epsilon-Greedy Exploration
+State Space: 288 discrete states (4×6×2×3×2)
+Action Space: 6 actions (Forward, Backward, Left, Right, Attack, Idle)
+Hyperparameters:
+  - Learning Rate (α): 0.2
+  - Discount Factor (γ): 0.9
+  - Initial Epsilon (ε): 1.0
+  - Epsilon Decay: 0.995
+  - Min Epsilon: 0.01
+  - Max Steps/Episode: 250
+
+TRAINING STATISTICS
+-------------------
+Total Episodes: 1000
+Total Steps: 185,086
+Training Duration: 24 hours
+
+PERFORMANCE METRICS
+-------------------
+Overall Statistics:
+  - Mean Reward: 73.41 ± 63.64
+  - Median Reward: 82.20
+  - Min Reward: -80.00 (Episode 9)
+  - Max Reward: 190.00 (Episode 599)
+  - Mean Episode Length: 185.1 steps
+  - Total Kills: 1203
+  - Mean Kills/Episode: 1.20
+
+Phase-Based Analysis:
+  Phase 1 (Exploration, Ep 1-250):
+    - Mean Reward: -5.30 ± 36.96
+    - Mean Kills: 0.32
+    
+  Phase 2 (Early Learning, Ep 251-500):
+    - Mean Reward: 48.68 ± 34.17
+    - Mean Kills: 0.99
+    
+  Phase 3 (Transition, Ep 501-750):
+    - Mean Reward: 108.93 ± 25.14
+    - Mean Kills: 1.56
+    
+  Phase 4 (Mastery, Ep 751-1000):
+    - Mean Reward: 141.34 ± 18.73
+    - Mean Kills: 1.94
+
+LEARNING PROGRESS
+-----------------
+Absolute Improvement: +146.64
+Relative Improvement: +2765.6%
+
+Reward Trend: ↗ Strong Improvement
+Convergence: ✓ Converged
+
+EXPLORATION ANALYSIS
+--------------------
+Initial Exploration Rate: 1.000
+Final Exploration Rate: 0.010
+Exploration Decay: Exponential (λ = 0.995)
+
+The agent successfully transitioned from exploration (ε ≈ 1.0) to 
+exploitation (ε ≈ 0.01), enabling policy refinement in later episodes.
+
+COMBAT PERFORMANCE
+------------------
+Early Phase (1-250): 0.32 kills/episode
+Late Phase (751-1000): 1.94 kills/episode
+Combat Efficiency Improvement: 515.2%
+
+FILES GENERATED
+---------------
+- training_stats.json: Complete training data
+- episode_data.csv: Episode-by-episode data
+- fig1_learning_curve.png: Main learning curve
+- fig2_performance_analysis.png: Performance metrics
+- fig3_qvalue_analysis.png: Q-value and policy analysis
+
+================================================================================
+Generated: 2026-03-01 16:17:52
+================================================================================
